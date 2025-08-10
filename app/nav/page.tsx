@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, { memo } from 'react'
-import DarkMode from './darkMode'
+import DarkMode from '../darkMode'
 
 interface NavProps {
   href: string
@@ -10,7 +10,7 @@ interface NavProps {
 function Nav({ href, label }: NavProps) {
   return (
     <li className='m-4 text-white dark:text-primary
-     hover:text-gray-600 dark:hover:text-gray-300 transition-colors text-lg hover:underline'>
+     hover:text-gray-600 dark:hover:text-black-300 transition-colors text-lg hover:underline'>
       <Link href={href}>{label}</Link>
     </li>
   )
@@ -18,14 +18,14 @@ function Nav({ href, label }: NavProps) {
 
 const Navbar = () => {
   const items = [
-    { label: 'Home', href: '/' },
-    { label: 'Portfolio', href: '/portfolio' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Skills', href: '/skills' },
-    { label: 'Testimonial', href: '/testimonial' },
-    { label: 'Journal', href: '/journal' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Home', href: '#home' },
+    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'About', href: '#about' },
+    { label: 'Services', href: '#services' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Testimonial', href: '#testimonial' },
+    { label: 'Journal', href: '#journal' },
+    { label: 'Contact', href: '#contact' },
   ]
 
   return (
